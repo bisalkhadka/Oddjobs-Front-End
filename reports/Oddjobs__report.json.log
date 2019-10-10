@@ -1,5 +1,44 @@
 {
   "feature": {
+    "uri": "Application.feature",
+    "description": "This is a restful api service test project.\nYou can use json-mock as an api server. Before runing the script, please init the mock message and start the json-mock server. It can be found in your project's node_modules folder. \nSteps:\n1. in command prompt, browse to your project folder,\n2. run the following command:\n    node_modules\\.bin\\json-mock.cmd data.json",
+    "keyword": "Feature",
+    "name": "<Feature Name>",
+    "line": 1,
+    "id": "<feature-name>",
+    "tags": []
+  }
+}{
+  "scenario": {
+    "uri": "Application.feature",
+    "id": "<feature-name>;get-data",
+    "keyword": "Scenario",
+    "line": 13,
+    "name": "Get data",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 90,
+      "status": "passed"
+    },
+    "steps": [
+      {
+        "arguments": [],
+        "keyword": "* ",
+        "line": 10,
+        "name": "Get the service api \"http://localhost:1111/cv\" and i should get the '\"Application sent.\"'",
+        "match": {
+          "location": "step_definitions\\definitions.js:11"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 90000000
+        }
+      }
+    ]
+  }
+}{
+  "feature": {
     "uri": "Applyjob.feature",
     "description": "This is a restful api service test project.\nYou can use json-mock as an api server. Before runing the script, please init the mock message and start the json-mock server. It can be found in your project's node_modules folder. \nSteps:\n1. in command prompt, browse to your project folder,\n2. run the following command:\n    node_modules\\.bin\\json-mock.cmd data.json",
     "keyword": "Feature",
@@ -18,7 +57,7 @@
     "tags": [],
     "type": "scenario",
     "result": {
-      "duration": 129,
+      "duration": 22,
       "status": "passed"
     },
     "steps": [
@@ -32,7 +71,7 @@
         },
         "result": {
           "status": "passed",
-          "duration": 129000000
+          "duration": 22000000
         }
       }
     ]
@@ -47,7 +86,7 @@
     "tags": [],
     "type": "scenario",
     "result": {
-      "duration": 12,
+      "duration": 5,
       "status": "passed"
     },
     "steps": [
@@ -61,7 +100,7 @@
         },
         "result": {
           "status": "passed",
-          "duration": 12000000
+          "duration": 5000000
         }
       }
     ]
@@ -86,7 +125,7 @@
     "tags": [],
     "type": "scenario",
     "result": {
-      "duration": 11,
+      "duration": 17,
       "status": "passed"
     },
     "steps": [
@@ -100,7 +139,7 @@
         },
         "result": {
           "status": "passed",
-          "duration": 11000000
+          "duration": 17000000
         }
       }
     ]
@@ -115,7 +154,7 @@
     "tags": [],
     "type": "scenario",
     "result": {
-      "duration": 47,
+      "duration": 49,
       "status": "passed"
     },
     "steps": [
@@ -129,7 +168,7 @@
         },
         "result": {
           "status": "passed",
-          "duration": 47000000
+          "duration": 49000000
         }
       }
     ]
@@ -154,16 +193,8 @@
     "tags": [],
     "type": "scenario",
     "result": {
-      "duration": 20,
-      "status": "failed",
-      "exception": {
-        "generatedMessage": true,
-        "name": "AssertionError [ERR_ASSERTION]",
-        "code": "ERR_ASSERTION",
-        "actual": "",
-        "expected": "Logged in",
-        "operator": "deepEqual"
-      }
+      "duration": 16,
+      "status": "passed"
     },
     "steps": [
       {
@@ -175,9 +206,8 @@
           "location": "step_definitions\\definitions.js:20"
         },
         "result": {
-          "status": "failed",
-          "duration": 20000000,
-          "error_message": "AssertionError [ERR_ASSERTION]: '' deepEqual 'Logged in'\n    + expected - actual\n\n    +Logged in\n\n    at options.World.<anonymous> (D:\\Oddjobs_Final\\Test1\\Oddjobs\\features\\step_definitions\\definitions.js:30:19)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
+          "status": "passed",
+          "duration": 16000000
         }
       }
     ]
@@ -202,7 +232,7 @@
     "tags": [],
     "type": "scenario",
     "result": {
-      "duration": 20,
+      "duration": 19,
       "status": "passed"
     },
     "steps": [
@@ -216,7 +246,7 @@
         },
         "result": {
           "status": "passed",
-          "duration": 20000000
+          "duration": 19000000
         }
       }
     ]
@@ -231,7 +261,7 @@
     "tags": [],
     "type": "scenario",
     "result": {
-      "duration": 19,
+      "duration": 34,
       "status": "passed"
     },
     "steps": [
@@ -245,7 +275,7 @@
         },
         "result": {
           "status": "passed",
-          "duration": 19000000
+          "duration": 34000000
         }
       }
     ]
@@ -270,7 +300,7 @@
     "tags": [],
     "type": "scenario",
     "result": {
-      "duration": 20,
+      "duration": 15,
       "status": "passed"
     },
     "steps": [
@@ -284,7 +314,7 @@
         },
         "result": {
           "status": "passed",
-          "duration": 20000000
+          "duration": 15000000
         }
       }
     ]
@@ -338,7 +368,7 @@
     "tags": [],
     "type": "scenario",
     "result": {
-      "duration": 16,
+      "duration": 15,
       "status": "passed"
     },
     "steps": [
@@ -352,7 +382,7 @@
         },
         "result": {
           "status": "passed",
-          "duration": 16000000
+          "duration": 15000000
         }
       }
     ]
@@ -367,7 +397,7 @@
     "tags": [],
     "type": "scenario",
     "result": {
-      "duration": 19,
+      "duration": 27,
       "status": "passed"
     },
     "steps": [
@@ -381,7 +411,7 @@
         },
         "result": {
           "status": "passed",
-          "duration": 19000000
+          "duration": 27000000
         }
       }
     ]
