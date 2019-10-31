@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel='stylesheet'
+		href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+	<link rel="stylesheet" href="css/jobview.css">
+	<link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
+	<script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
+	<link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet' />
+
+
+
+</head>
+
+<body>
+	<nav class="navbar navbar-toggleable-sm navbar-inverse bg-inverse">
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar"
+			aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" href="#">ODDJOBS</a>
+		<div class="collapse navbar-collapse justify-content-between" id="navbar">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link" href="showjobs.html">Apply Job</a>
+				<a class="nav-item nav-link" href="addjobs.html">Post Job</a>
+			</div>
+			<div class="navbar-nav">
+				<a class="nav-item nav-link" href="updates.html">Profile</a>
+
+				<button type="button" class="btn btn-dark" id="logout">Logout</button>
+
+			</div>
+		</div>
+	</nav>
+
+
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+
+				<div class="row">
+					
+					<div class="col-6 mt-2"  id="tablea" border-style: solid;>
+					
+
+					</div>
+					
+					<div class="col-6 mt-2"  id='map' style="height: 400px">
+
+					</div>
+					<!-- <div id='map_simple' class='map'> </div>
+
+      </div> -->
+				</div>
+			</div>
+		</div>
+		
+
+
+			
+						
+					
+				
+						<div class="row">
+							<div class="col-12">
+									<div class="col-md-5">
+											<br>
+											<form>
+													<div id="ratingloop"></div>
+												</form>
+											<h2 class="page-header">Ratings</h2>
+											<section class="ratinglist">
+												<table>
+													<tbody id="ratetable">
+													</tbody>
+												</table>
+												
+											</section>
+				
+										</div>
+						<div class="col-md-5">
+						
+							<input type="text" id="com" />
+							<button class="btn btn-primary" id="comment">Publish Review</button>
+							
+							<br>
+							<h2 class="page-header">Reviews</h2>
+							<section class="comment-list">
+								<!-- First Comment -->
+								<div id="commentloop"></div>
+
+							</section>
+						</div>
+						
+
+					</div>
+				</div>
+				</div>
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+				<script>
+					$(document).ready(function () {
+						var urlParams = new URLSearchParams(window.location.search);
+						var id = urlParams.get("id");
+						$.ajax({
+							type: 'GET',
+							url: 'http://localhost:1111/jobreview/' + id,
+							success: function (data) {
+								console.log(data);
+								$.each(data, function (index) {
+									$("#commentloop").append(
+										'<article class="row">' +
+										'<div class="col-md-2 col-sm-2 hidden-xs">' +
+										'<figure class="thumbnail">' +
+										'<img class="img-responsive" style="width: 50px;" src="http://www.tangoflooring.ca/wp-content/uploads/2015/07/user-avatar-placeholder.png" />' +
+										' <figcaption class="text-center">' + data[index].User.Firstname + '</figcaption>' +
+										'</figure>' +
+										'</div>' +
+										'<div class="col-md-10 col-sm-10">' +
+										'<div class="panel panel-default arrow left">' +
+										'<div class="panel-body">' +
+										'<header class="text-left">' +
+										'<time class="comment-date" datetime="09-07-2019 01:05"><i class="fa fa-clock-o"></i> July 9, 2019</time>' +
+										'</header>' +
+										'<div class="comment-post">' +
+										'<p>' + data[index].Review + '</p>' +
+										'</div>' +
+										'</div>' +
+										'</div>' +
+										'</div>' +
+										'</article>'
+
+
+									);
+								});
+							}
+						})
+					})
+				</script>
+			
+
+
+
+	<footer class="footer-distributed">
+
+		<div class="footer-left">
+
+			<h3>ODD<span>JOBS</span></h3>
+
+			<p class="footer-links">
+				<a href="#">Home</a>
+				·
+				<a href="#">Blog</a>
+				·
+				<a href="#">Pricing</a>
+				·
+				<a href="#">About</a>
+				·
+				<a href="#">Faq</a>
+				·
+				<a href="#">Contact</a>
+			</p>
+
+			<p class="footer-company-name">ODD JOBS &copy; 2019</p>
+		</div>
+
+		<div class="footer-center">
+
+			<div>
+				<i class="fa fa-map-marker"></i>
+				<p><span>21 Freak Street</span> Kathmandu, Nepal</p>
+			</div>
+
+
+
+			<div>
+				<i class="fa fa-envelope"></i>
+				<p><a href="mailto:support@company.com">oddjobs@gmail.com</a></p>
+			</div>
+
+		</div>
+
+		<div class="footer-right">
+
+			<p class="footer-company-about">
+				<span>About OddJobs</span>
+				We provide varities of jobs <br />
+				User can post different kinds of jobs <br />
+				as well as apply jobs in which they are interested<br />
+			</p>
+
+			<div class="footer-icons">
+
+				<a href="facebook.com"><i class="fa fa-facebook"></i></a>
+				<a href="twitter.com"><i class="fa fa-twitter"></i></a>
+				<a href="gmail.com"><i class="fa fa-gmail"></i></a>
+				<a href="instagram.com"><i class="fa fa-instagram"></i></a>
+
+			</div>
+
+		</div>
+
+	</footer>
+	<script src='https://code.jquery.com/jquery-3.1.1.slim.min.js'></script>
+
+
+
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+	<script src="./Controller/comment.js"></script>
+	<script src="./Controller/jobview.js"></script>
+	<script src="./Controller/logout.js"></script>
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+
+	<!--  <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script> -->
+</body>
+
+</html>

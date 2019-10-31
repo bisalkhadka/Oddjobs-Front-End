@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Admin Panel</title>
+<link media="all" type="text/css" rel="stylesheet" href="css/bootstrap.css">
+<link media="all" type="text/css" rel="stylesheet" href="css/admin-style.css">
+<style>
+.delete{
+color:black;
+}
+</style>
+</head>
+
+<body>
+
+<div class='content-main container-fluid' id='pinBoxContainer'>
+    <div class="row">
+        <div class="col-2 main-sidebar">
+            <div class="side-bar">
+                <div class="header-wrap">
+                    <h2>Oddjobs</h2>
+                </div>
+            
+                <ul class="sidebar-nav">
+                        <li role="presentation" class="">
+                            <a href="admin.html"><i class="fa fa-tachometer"></i>Dashboard</a>
+                        </li>
+                        <li>
+                                <a href="users.html"><i class="fa fa-home" aria-hidden="true"></i>Users</a>
+                            </li>
+                        <li>
+                          <a href="adminprofile.html"><i class="fa fa-home" aria-hidden="true"></i>Profile</a>
+                        </li>
+                        <li>
+                            <a href="adminjobdetails.html"><i class="fa fa-home" aria-hidden="true"></i>Job Details</a>
+                        </li>
+                        <li>
+                            <a href="admincontactdetails.html"><i class="fa fa-sliders" aria-hidden="true"></i>Contact Details</a>
+                        </li>
+                        <li>
+                                <a href="cv.html"><i class="fa fa-sliders" aria-hidden="true"></i>Applied Jobs</a>
+                            </li>
+							<li>
+                            <a href="adminuserdetails.html"><i class="fa fa-sliders" aria-hidden="true"></i>Remove</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        
+        <div class="col-10">
+            <div class="header-right">
+                <ul>
+                    <li>
+                        <a href="admin.html" target="_blank"><i class="fa fa-user"></i> Go To Home Page </a>
+						<button type="button" class="btn btn-square btn-dark" id="logout">Logout</button>
+                        
+                    </li>
+                    <li>
+                        
+                    </li>
+                </ul>
+            </div>
+      
+        <div class="alert alert-success text-center">
+    <h4>REGISTERED USERS</h4>
+</div>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+                    <tr>
+					  <th scope="col">Firstname</th>
+                        <th scope="col">Lastname</th>
+                       <th scope="col">Username</th>
+                        <th scope="col">Email</th>
+                       <th scope="col">Phone</th>
+                     
+                     
+                    </tr>
+                   
+
+ </thead>
+  <tbody id="tablea"></tbody>
+</table>
+  </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="./Controller/users.js"></script>
+<script src="./Controller/logout.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</body>
+</html>
+
+
