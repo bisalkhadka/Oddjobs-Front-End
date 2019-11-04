@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Post Job</title>
+  <link rel='stylesheet'
+    href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="css/addjobs.css">
+  <link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
+
+
+</head>
+
+
+<body>
+  <nav class="navbar navbar-toggleable-sm navbar-inverse bg-inverse">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">ODDJOBS</a>
+    <div class="collapse navbar-collapse justify-content-between" id="navbar">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="showjobs.html">Apply Job</a>
+       <a class="nav-item nav-link" href="addjobs.html">Post Job</a>
+
+       
+      </div>
+      <div class="navbar-nav">
+	    <a class="nav-item nav-link" href="updates.html">Profile</a>
+     <button type="button" class="btn btn-dark" id="logout">Logout</button>
+
+      </div>
+    </div>
+  </nav>
+
+  <form class="container my-5" id="contact-form" method="post" action="#">
+
+    <div class="row">
+      <fieldset class="col-sm-6 form-group">
+
+        <div class="form-group">
+          <label for="job">Job Title</label>
+          <input type="text" class="form-control" id="Title" placeholder=" Enter job title">
+        </div>
+        <div class="form-group">
+          <label for="description"> Job Description</label>
+          <textarea type="text" class="form-control" id="Description" placeholder=""></textarea>
+        </div>
+        <!-- form-group -->
+
+        <div class="form-group">
+          <label for="latitude">Latitude</label>
+          <input type="text" class="form-control" id="Latitude" placeholder=" Enter Latitude">
+        </div>
+        <div class="form-group">
+          <label for="Category">Job Category</label>
+          <select id="Category" name="Category" class="form-control">
+            <option value="">Select the job category</option>
+            <option value="Plumber">Coding</option>
+            <option value="Carpenter">Designer</option>
+            <option value="Cleaner">Project Manager</option>
+            <option value="Others">Analyst</option>
+            <option value="Others">Others</option>
+          </select>
+          <script>
+            function getSelectValue() {
+              var selectedValue = document.getElementById("Category").value;
+              console.log(selectedValue);
+            }
+            getSelectValue();
+          </script>
+        </div>
+        <div class="form-group">
+          <label for="Type">Job Type</label>
+          <select id="Type" name="Type" class="form-control">
+            <option value="">Select the job type</option>
+            <option value="Hourly">Hourly</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option>
+          </select>
+          <script>
+            function getSelectValue() {
+              var selectedValue = document.getElementById("Type").value;
+              console.log(selectedValue);
+            }
+            getSelectValue();
+          </script>
+        </div>
+
+      </fieldset>
+      <!-- fieldset -->
+
+      <fieldset class="form-group col-sm-6">
+        <label class="labes text-dark">Choose Image</label>
+        <input class="form-control" type="file" name="fileToUpload" id="fileToUpload" /></br>
+        <div class="form-group">
+          <label for="job">Job Location</label>
+          <input type="text" class="form-control" id="Location" placeholder=" Enter job location">
+        </div>
+
+        <div class="form-group">
+          <label for="latitude">Longitude</label>
+          <input type="text" class="form-control" id="Longitude" placeholder=" Enter Longitude">
+        </div>
+        <div class="form-group">
+          <label for="job">Closing Date</label>
+          <input type="date" class="form-control" id="JobDt" placeholder=" Enter job closing date">
+        </div>
+
+        <div class="form-group">
+          <label for="job">Notification Email</label>
+          <input type="email" class="form-control" id="Email" placeholder=" Enter notification email">
+        </div>
+
+      </fieldset>
+      <!-- fieldset -->
+
+
+      <!-- form-group -->
+    </div>
+    <button type="Submit" id="Submit" class="btn btn-success btn-block submit">
+    Post</button>
+  </form>
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+
+      <h3>ODD<span>JOBS</span></h3>
+
+      <p class="footer-links">
+        <a href="#">Home</a>
+        ·
+        <a href="#">Blog</a>
+        ·
+        <a href="#">Pricing</a>
+        ·
+        <a href="#">About</a>
+        ·
+        <a href="#">Faq</a>
+        ·
+        <a href="#">Contact</a>
+      </p>
+
+      <p class="footer-company-name">ODD JOBS &copy; 2019</p>
+    </div>
+
+    <div class="footer-center">
+
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>21 Freak Street</span> Kathmandu, Nepal</p>
+      </div>
+
+
+
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@company.com">oddjobs@gmail.com</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-right">
+
+      <p class="footer-company-about">
+        <span>About OddJobs</span>
+        We provide varities of jobs <br />
+        User can post different kinds of jobs <br />
+        as well as apply jobs in which they are interested<br />
+      </p>
+
+      <div class="footer-icons">
+
+        <a href="facebook.com"><i class="fa fa-facebook"></i></a>
+        <a href="twitter.com"><i class="fa fa-twitter"></i></a>
+        <a href="gmail.com"><i class="fa fa-gmail"></i></a>
+        <a href="instagram.com"><i class="fa fa-instagram"></i></a>
+
+      </div>
+
+    </div>
+
+  </footer>
+</body>
+<script src='https://code.jquery.com/jquery-3.1.1.slim.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="./Controller/addjob.js"></script>
+<script src="./Controller/logout.js"></script>
+
+</html>

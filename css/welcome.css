@@ -1,0 +1,68 @@
+* {
+  -webkit-transition-property: all;
+  -webkit-transition-duration: .2s;
+  -moz-transition-timing-function: cubic-bezier(100, 50, 21, 6);
+  -moz-transition-property: all;
+  -moz-transition-duration: .2s;
+  -moz-transition-timing-function: cubic-bezier(100, 50, 21, 6);
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  color: #c78e2d;
+}
+
+body {
+ background-image: linear-gradient(to right top, #d9f4f8, #d1f5f9, #c9f7fa, #c0f8fa, #b8f9fa, #bcfaf4, #c2fbee, #c9fbe8, #dcfae2);
+  padding-top: 10px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-weight: 100;
+}
+
+.btn {
+  position: relative;
+  margin-top:10px;
+  display: inline-block;
+  width: 291px;
+  height: 51px;
+  font-size: 12px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  color: purple;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.btn svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+    color: black;
+
+}
+
+.btn svg rect {
+	  
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1;
+  stroke-dasharray: 422, 0;
+  -webkit-transition: all 1300ms cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: all 1300ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1300ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn:hover svg rect {
+  stroke-width: 5;
+  stroke-dasharray: 10, 310;
+  stroke-dashoffset: 33;
+}
+
+.btn:hover {
+  color: black;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}

@@ -1,0 +1,18 @@
+#fileToUpload {
+    background: #009879;
+    border: 2px solid #00745d;
+    border-radius: 4px;
+    outline: none;
+    padding: 0.5em 0.8em;
+    margin-right: 15px;
+    color: #ffffff;
+    font-size: 1em;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  body {
+    background-image: linear-gradient(#8b9da9, #fff6e4);
+
+  }
