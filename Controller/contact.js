@@ -16,7 +16,11 @@
         }
         console.log(data);
     
-                        
+        if(Name == "" || Email == "" || Phone == "" || Message == "") {
+            alert("Please Fill out the required fields!!");
+          }
+          
+          else {
                  $.ajax({  
                      url: 'http://localhost:1111/contact',
                      type: 'post',  
@@ -29,8 +33,9 @@
                      error: function (xhr, textStatus, errorThrown) {  
                          console.log('Error in Operation');  
                      }  
-                 });  
+                 }); 
+                } 
              });
-
+            
 
              }); 

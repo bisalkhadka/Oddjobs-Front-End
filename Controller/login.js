@@ -31,10 +31,10 @@
                 if(res.token!=null){
                  localStorage.setItem('token', res.token); 
                 if(res.userdata.usertype=="admin"){
-              location.href="admin.html"
+              location.href="adminjobdetails.html"
               alert("Welcome to admin panel")
                 } else if(res.userdata.usertype=="user"){
-                  location.href="userhome.html"
+                  location.href="showjobs.html"
                   alert("Welcome to oddjobs")
                 }
                 }
