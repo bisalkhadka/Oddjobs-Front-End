@@ -1,0 +1,389 @@
+{
+  "feature": {
+    "uri": "Applyjob.feature",
+    "description": "This is a restful api service test project.\nYou can use json-mock as an api server. Before runing the script, please init the mock message and start the json-mock server. It can be found in your project's node_modules folder. \nSteps:\n1. in command prompt, browse to your project folder,\n2. run the following command:\n    node_modules\\.bin\\json-mock.cmd data.json",
+    "keyword": "Feature",
+    "name": "<Feature Name>",
+    "line": 1,
+    "id": "<feature-name>",
+    "tags": []
+  }
+}{
+  "scenario": {
+    "uri": "Applyjob.feature",
+    "id": "<feature-name>;get-data",
+    "keyword": "Scenario",
+    "line": 13,
+    "name": "Get data",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 129,
+      "status": "passed"
+    },
+    "steps": [
+      {
+        "arguments": [],
+        "keyword": "* ",
+        "line": 10,
+        "name": "Get the service api \"http://localhost:1111/users\" and i should get the '\"Users shown\"'",
+        "match": {
+          "location": "step_definitions\\definitions.js:11"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 129000000
+        }
+      }
+    ]
+  }
+}{
+  "scenario": {
+    "uri": "Applyjob.feature",
+    "id": "<feature-name>;get-data",
+    "keyword": "Scenario",
+    "line": 20,
+    "name": "Get data",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 12,
+      "status": "passed"
+    },
+    "steps": [
+      {
+        "arguments": [],
+        "keyword": "* ",
+        "line": 17,
+        "name": "Get the service api \"http://localhost:1111/user/me\" and i should get the '\"Users\"'",
+        "match": {
+          "location": "step_definitions\\definitions.js:11"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 12000000
+        }
+      }
+    ]
+  }
+}{
+  "feature": {
+    "uri": "Contact.feature",
+    "description": "This is a restful api service test project.\nYou can use json-mock as an api server. Before runing the script, please init the mock message and start the json-mock server. It can be found in your project's node_modules folder. \nSteps:\n1. in command prompt, browse to your project folder,\n2. run the following command:\n    node_modules\\.bin\\json-mock.cmd data.json",
+    "keyword": "Feature",
+    "name": "<Feature Name>",
+    "line": 1,
+    "id": "<feature-name>",
+    "tags": []
+  }
+}{
+  "scenario": {
+    "uri": "Contact.feature",
+    "id": "<feature-name>;get-data",
+    "keyword": "Scenario",
+    "line": 13,
+    "name": "Get data",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 11,
+      "status": "passed"
+    },
+    "steps": [
+      {
+        "arguments": [],
+        "keyword": "* ",
+        "line": 10,
+        "name": "Get the service api \"http://localhost:1111/contactdetails\" and i should get the '\"Message sent.\"'",
+        "match": {
+          "location": "step_definitions\\definitions.js:11"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 11000000
+        }
+      }
+    ]
+  }
+}{
+  "scenario": {
+    "uri": "Contact.feature",
+    "id": "<feature-name>;post-data",
+    "keyword": "Scenario",
+    "line": 19,
+    "name": "Post data",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 47,
+      "status": "passed"
+    },
+    "steps": [
+      {
+        "arguments": [],
+        "keyword": "* ",
+        "line": 16,
+        "name": "Post to service api \"http://localhost:1111/contact\" with '{ \"Name\": \"Hello\", \"Email\": \"Zack@asd.com\", \"Phone\": \"9999\", \"Message\": \"asdf\"}' and I should get the '\"Message Sent to the Admin\"'",
+        "match": {
+          "location": "step_definitions\\definitions.js:20"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 47000000
+        }
+      }
+    ]
+  }
+}{
+  "feature": {
+    "uri": "Login.feature",
+    "description": "This is a restful api service test project.\nYou can use json-mock as an api server. Before runing the script, please init the mock message and start the json-mock server. It can be found in your project's node_modules folder. \nSteps:\n1. in command prompt, browse to your project folder,\n2. run the following command:\n    node_modules\\.bin\\json-mock.cmd data.json",
+    "keyword": "Feature",
+    "name": "<Login>",
+    "line": 1,
+    "id": "<login>",
+    "tags": []
+  }
+}{
+  "scenario": {
+    "uri": "Login.feature",
+    "id": "<login>;post-data",
+    "keyword": "Scenario",
+    "line": 13,
+    "name": "Post data",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 20,
+      "status": "failed",
+      "exception": {
+        "generatedMessage": true,
+        "name": "AssertionError [ERR_ASSERTION]",
+        "code": "ERR_ASSERTION",
+        "actual": "",
+        "expected": "Logged in",
+        "operator": "deepEqual"
+      }
+    },
+    "steps": [
+      {
+        "arguments": [],
+        "keyword": "* ",
+        "line": 10,
+        "name": "Post to service api \"http://localhost:1111/login\" with '{ \"Email\": \"Yumasnor@gmail.com\", \"Password\": \"asd\"}' and I should get the '\"Logged in\"'",
+        "match": {
+          "location": "step_definitions\\definitions.js:20"
+        },
+        "result": {
+          "status": "failed",
+          "duration": 20000000,
+          "error_message": "AssertionError [ERR_ASSERTION]: '' deepEqual 'Logged in'\n    + expected - actual\n\n    +Logged in\n\n    at options.World.<anonymous> (D:\\Oddjobs_Final\\Test1\\Oddjobs\\features\\step_definitions\\definitions.js:30:19)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
+        }
+      }
+    ]
+  }
+}{
+  "feature": {
+    "uri": "Postjobs.feature",
+    "description": "This is a restful api service test project.\nYou can use json-mock as an api server. Before runing the script, please init the mock message and start the json-mock server. It can be found in your project's node_modules folder. \nSteps:\n1. in command prompt, browse to your project folder,\n2. run the following command:\n    node_modules\\.bin\\json-mock.cmd data.json",
+    "keyword": "Feature",
+    "name": "<Feature Name>",
+    "line": 1,
+    "id": "<feature-name>",
+    "tags": []
+  }
+}{
+  "scenario": {
+    "uri": "Postjobs.feature",
+    "id": "<feature-name>;get-data",
+    "keyword": "Scenario",
+    "line": 14,
+    "name": "Get data",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 20,
+      "status": "passed"
+    },
+    "steps": [
+      {
+        "arguments": [],
+        "keyword": "* ",
+        "line": 11,
+        "name": "Get the service api \"http://localhost:1111/showjobs\" and i should get the '\"Browse the jobs.\"'",
+        "match": {
+          "location": "step_definitions\\definitions.js:11"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 20000000
+        }
+      }
+    ]
+  }
+}{
+  "scenario": {
+    "uri": "Postjobs.feature",
+    "id": "<feature-name>;post-data",
+    "keyword": "Scenario",
+    "line": 20,
+    "name": "Post data",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 19,
+      "status": "passed"
+    },
+    "steps": [
+      {
+        "arguments": [],
+        "keyword": "* ",
+        "line": 17,
+        "name": "Post to service api \"http://localhost:1111/addjob\" with '{ \"userid\":\"5dbefeb399761844e4db9b1c\",\"fileToUpload\":\"\",\"Title\": \"Goodjobs\",\"Description\": \"Betterjobs\",\"Category\": \"\",\"Type\": \"\",\"Location\": \"12123\",\"Latitude\":\"123123\",\"JobDt\":\"\", \"Email\":\"asd@gmail.com\"}' and I should get the '\"Job Posted\"'",
+        "match": {
+          "location": "step_definitions\\definitions.js:20"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 19000000
+        }
+      }
+    ]
+  }
+}{
+  "feature": {
+    "uri": "Register.feature",
+    "description": "This is a restful api service test project.\nYou can use json-mock as an api server. Before runing the script, please init the mock message and start the json-mock server. It can be found in your project's node_modules folder. \nSteps:\n1. in command prompt, browse to your project folder,\n2. run the following command:\n    node_modules\\.bin\\json-mock.cmd data.json",
+    "keyword": "Feature",
+    "name": "<Feature Name>",
+    "line": 1,
+    "id": "<feature-name>",
+    "tags": []
+  }
+}{
+  "scenario": {
+    "uri": "Register.feature",
+    "id": "<feature-name>;post-data",
+    "keyword": "Scenario",
+    "line": 15,
+    "name": "Post data",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 20,
+      "status": "passed"
+    },
+    "steps": [
+      {
+        "arguments": [],
+        "keyword": "* ",
+        "line": 12,
+        "name": "Post to service api \"http://localhost:1111/register\" with '{ \"Firstname\": \"Yumas\",\"Lastname\":\"asd\",\"Username\":\"He\",\"Email\":\"asdf@gmal.com\",\"Address\":\"12\",\"Phone\":\"11234\",\"Password\":\"s\",\"Confpassword\":\"s\" }' and I should get the '\"Registered\"'",
+        "match": {
+          "location": "step_definitions\\definitions.js:20"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 20000000
+        }
+      }
+    ]
+  }
+}{
+  "feature": {
+    "uri": "Users.feature",
+    "description": "This is a restful api service test project.\nYou can use json-mock as an api server. Before runing the script, please init the mock message and start the json-mock server. It can be found in your project's node_modules folder. \nSteps:\n1. in command prompt, browse to your project folder,\n2. run the following command:\n    node_modules\\.bin\\json-mock.cmd data.json",
+    "keyword": "Feature",
+    "name": "<Feature Name>",
+    "line": 1,
+    "id": "<feature-name>",
+    "tags": []
+  }
+}{
+  "scenario": {
+    "uri": "Users.feature",
+    "id": "<feature-name>;get-data",
+    "keyword": "Scenario",
+    "line": 13,
+    "name": "Get data",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 11,
+      "status": "passed"
+    },
+    "steps": [
+      {
+        "arguments": [],
+        "keyword": "* ",
+        "line": 10,
+        "name": "Get the service api \"http://localhost:1111/cv/5dbefeb399761844e4db9b1c\" and i should get the '\"CV received.\"'",
+        "match": {
+          "location": "step_definitions\\definitions.js:11"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 11000000
+        }
+      }
+    ]
+  }
+}{
+  "scenario": {
+    "uri": "Users.feature",
+    "id": "<feature-name>;post-data",
+    "keyword": "Scenario",
+    "line": 21,
+    "name": "Post data",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 16,
+      "status": "passed"
+    },
+    "steps": [
+      {
+        "arguments": [],
+        "keyword": "* ",
+        "line": 18,
+        "name": "Post to service api \"http://localhost:1111/addcv\" with '{ \"userid\":\"5dbefeb399761844e4db9b1c\",\"jid\":\"5dbf1039bcbb4d45c46f10e5\",\"Username\": \"Hello\", \"Email\": \"Zack@asd.com\", \"Education\": \"9999\", \"Qualification\": \"asdf\", \"Experience\": \"+2\"}' and I should get the '\"Your application is sent.\"'",
+        "match": {
+          "location": "step_definitions\\definitions.js:20"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 16000000
+        }
+      }
+    ]
+  }
+}{
+  "scenario": {
+    "uri": "Users.feature",
+    "id": "<feature-name>;get-data",
+    "keyword": "Scenario",
+    "line": 27,
+    "name": "Get data",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 19,
+      "status": "passed"
+    },
+    "steps": [
+      {
+        "arguments": [],
+        "keyword": "* ",
+        "line": 24,
+        "name": "Get the service api \"http://localhost:1111/addjobs\" and i should get the '\"Job added.\"'",
+        "match": {
+          "location": "step_definitions\\definitions.js:11"
+        },
+        "result": {
+          "status": "passed",
+          "duration": 19000000
+        }
+      }
+    ]
+  }
+}
